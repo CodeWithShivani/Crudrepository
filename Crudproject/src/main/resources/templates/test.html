@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="itemModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="modalTitle" class="modal-title">Add Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="itemForm">
+                    <input type="hidden" id="itemId">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="saveButton">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">Update Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateForm">
+                    <input type="hidden" id="updateItemId">
+                    <div class="mb-3">
+                        <label for="updateItemName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="updateItemName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateItemDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="updateItemDescription"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveUpdateButton">Save changes</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
